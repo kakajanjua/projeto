@@ -35,7 +35,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-    
+   height: 100vh; 
 }
 
 #container {
@@ -147,4 +147,11 @@ footer {
     text-align: center;
     gap: 8px;
     font-size: 14px;
+}
+
+@media (min-width:700px) {
+:root {
+    --bg-url: url(./assets/Background.jpg);
+
+}
 }
