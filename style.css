@@ -92,7 +92,7 @@ animation: slide-back 0.2s;
     backdrop-filter: blur(4px);
     --webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
-    transition: background 0.2s ease;
+    
 
 }
 .light #switch button{
