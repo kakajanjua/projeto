@@ -69,15 +69,19 @@ border: 0;
 border-radius: 50%;
 position:absolute;
 left:0;
-z-index: 1;
 top:50%;
+z-index: 1;
 transform: translateY(-50%);
+animation: slide-back 0.2s;
 
 }
 #switch{
     position:relative;
     width: 64px;
     margin: 4px auto;
+}
+#switch button:hover{
+    outline:8px solid var(--highlight-color);
 }
 #switch span{
     display:block;
@@ -88,11 +92,11 @@ transform: translateY(-50%);
     backdrop-filter: blur(4px);
     --webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
+    transition: background 0.2s ease;
 
 }
-.light #switch buttton{
-    right:0;
-    left: initial;
+.light #switch button{
+    animation: slide-in 0.4s forwards;
 }
 ul {
     list-style: none;
@@ -154,4 +158,22 @@ footer {
     --bg-url: url(./assets/Background.jpg);
 
 }
+.light{
+   --bg-url: url(./assets/bg-desktop-light.jpg);  
+}
+}
+@keyframes slide-in{
+    from{
+        left: 0%;
+        
+    }
+    to{
+        left:50%;
+    }
+}
+@keyframes slide-back{
+    from{left:50%}
+    to{
+        left:0;
+    }
 }
